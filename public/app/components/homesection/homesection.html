@@ -1,0 +1,29 @@
+<!-- <div ng-include="'app/partials/header.html'" ></div> -->
+
+<div ng-include="'app/components/titlePortion/titleSection.html'" ></div>
+<div ng-include="'app/components/whyus/whyus.html'" ></div>
+  
+ <service-section ></service-section>
+
+<div ng-include="'app/components/customerReview/customerReview.html'" ></div>
+
+<div ng-include="'app/components/ourPartners/partners.html'" ></div>
+
+
+<section id="infographixCount" class="section-padding1 infografix" >
+ <div class="infogrText" ng-repeat="i in infografix">
+    <i class="material-icons">{{i.icon}}</i>
+<span class="spanclass"> {{i.value}}{{i.value === i.max ? i.type : ''}}</span>
+<div class="undertext">{{i.text}}</div>
+</div>
+</section>
+   <!-- Preloader -->
+  <div id="preloader" ng-show="loaded" class="animate-show animate-hide">
+    <div class="preloader-position">
+      <img src="assets/img/logo.png" alt="logo" width="300">
+      <div class="progress">
+        <div class="indeterminate"></div>
+      </div>
+    </div>
+  </div>
+ 

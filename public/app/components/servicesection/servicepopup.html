@@ -1,0 +1,59 @@
+<md-dialog layout="column"  flex="50"  layout-xs="column" style="z-index: 999999;">
+  <!-- <form ng-cloak> -->
+    <div class="md-toolbar-tools" flex="50">
+        <strong class="centerHeader" flex="grow">All Services</strong>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="assets/img/icons/ic_close_24px.svg" aria-label="Close dialog">X</md-icon>
+        </md-button>
+      </div>
+     <!--  <div class="md-toolbar-tools">
+        <h2>All Services</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel($event)">
+          <md-icon md-svg-src="assets/img/icons/ic_close_24px.svg" aria-label="Close dialog">X</md-icon>
+        </md-button>
+      </div> -->
+
+    <md-dialog-content class="mddialog">
+<div ng-controller="AppCtrl" layout="column" style="height:500px;" ng-cloak>
+
+    <section layout="row" flex>
+    <md-sidenav class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" md-whiteframe="4">
+
+      <md-content  ng-controller="LeftCtrl" >
+        <md-button ng-click="close()" class="md-primary" hide-gt-md>
+          Close Sidenav Left
+        </md-button>
+        <div class="collection">
+
+         <a href="#" ng-if="isCatShow"  ng-repeat="item in allcategory" ng-click="getServiceById($event,item.id)"
+          ng-class="catId === item.id ? 'active collection-item' : 'collection-item inactive' ">{{item.catName}}
+        </a>
+         
+        <a href="#" ng-if="!isCatShow" class="active collection-item">{{unitCatName}}
+        </a>
+        </div>
+      </md-content>
+
+    </md-sidenav>
+
+    <md-content flex layout-padding style="background-color: transparent !important">
+        <md-button ng-click="toggleLeft()" class="md-primary" hide-gt-md>
+          Toggle Category
+        </md-button>
+        
+        <md-list-item ng-repeat="item in allServices" ng-click="goToServiceForm(item, $event)" class="noright">
+          <p>{{ item.serviceName }}</p>
+          <md-divider></md-divider>
+          </md-list-item>
+        </md-content>
+
+  </section>
+</div>
+
+    </md-dialog-content>
+
+   
+  <!-- </form> -->
+</md-dialog>
