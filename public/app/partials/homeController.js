@@ -100,7 +100,13 @@ app
         });
     };
 
-    function DialogController($scope, $mdDialog, $rootScope) {
+    function DialogController($scope, $mdDialog, $rootScope ,$window) {
+      // console.log("$window.innerWidth===",$window.innerWidth);
+      $scope.isdesktop=true;
+      
+      if($window.innerWidth <= 768){
+        $scope.isdesktop=false;
+      }
       $scope.catModel = true;
       var requestData = {};
       if($scope.catId != undefined || $scope.catId != null){

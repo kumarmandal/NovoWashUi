@@ -1,6 +1,14 @@
-<md-dialog layout="column"  flex="50"  layout-xs="column" style="z-index: 999999;">
+<md-dialog layout="column"  flex="{{isdesktop ? 50 : 100}}"  layout-xs="column" style="z-index: 999999;" ng-class="{{isdesktop ? 'menuDesctop' : 'menuMobile'}}" class="servicepopUp">
   <!-- <form ng-cloak> -->
-    <div class="md-toolbar-tools" flex="50">
+    <div class="md-toolbar-tools" flex="50" ng-if="isdesktop">
+        <strong class="centerHeader" flex="grow">All Services</strong>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="assets/img/icons/ic_close_24px.svg" aria-label="Close dialog">X</md-icon>
+        </md-button>
+      </div>
+
+      <div class="md-toolbar-tools" flex="50" ng-if="!isdesktop">
         <strong class="centerHeader" flex="grow">All Services</strong>
         <span flex></span>
         <md-button class="md-icon-button" ng-click="cancel()">
@@ -27,7 +35,7 @@
         </md-button>
         <div class="collection">
 
-         <a href="#" ng-if="isCatShow"  ng-repeat="item in allcategory" ng-click="getServiceById($event,item.id)"
+         <a href="#" ng-if="isCatShow"  ng-repeat="item in allcategory" ng-click="getServiceById($event,item.id); toggleLeft();"
           ng-class="catId === item.id ? 'active collection-item' : 'collection-item inactive' ">{{item.catName}}
         </a>
          
@@ -57,3 +65,5 @@
    
   <!-- </form> -->
 </md-dialog>
+
+

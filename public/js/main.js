@@ -842,7 +842,7 @@ app
       })
 
     $scope.showAdvanced = function (event,catId) {
-      // console.log("catId in showAdvanced mehod====",catId);
+      console.log("catId in showAdvanced mehod====",catId);
        if(catId == undefined || catId == null){
          catId = 1;
          $scope.isCatShow=true;
@@ -851,6 +851,7 @@ app
       $rootScope.catId = catId;
        $scope.catId=catId;
        }
+       
       $mdDialog.show({
         controller: DialogController,
         templateUrl: 'app/components/servicesection/servicepopup.html',
@@ -866,7 +867,10 @@ app
         });
     };
 
-    function DialogController($scope, $mdDialog, $rootScope) {
+    function DialogController($scope, $mdDialog, $rootScope ,$window) {
+
+      console.log("window.innerWidth===",$window.innerWidth);
+
       $scope.catModel = true;
       var requestData = {};
       if($scope.catId != undefined || $scope.catId != null){

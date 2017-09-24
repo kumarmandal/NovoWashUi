@@ -9,8 +9,19 @@
   .menuDesctop {
     display: none; }
 
+  md-dialog {
+    padding-top: 8rem !important; }
+
+  .md-inline-form {
+    height: 100% !important; }
+
+  .md-divider {
+    padding: 0px !important; }
+
   .menuMobile {
     display: block; }
+    .menuMobile ul {
+      margin-bottom: 0px !important; }
     .menuMobile .container {
       width: 100%; }
     .menuMobile .header-sticky {
@@ -21,14 +32,15 @@
       display: inline-grid;
       text-align: center; }
       .menuMobile .first-half .intellitext {
-        font-size: 11px;
+        font-size: 9px;
         font-weight: 900;
-        text-align: left; }
+        text-align: left;
+        line-height: 13px; }
       .menuMobile .first-half .logo-brand {
         z-index: 1200;
         font-family: 'Great Vibes',normal;
         font-size: 4rem !important;
-        letter-spacing: 2px !important;
+        letter-spacing: 1px !important;
         margin-top: 2.5rem;
         margin-bottom: 0rem !important;
         color: #8fd049; }
@@ -40,6 +52,7 @@
       width: 30px;
       height: 46px;
       padding: 0px 0px 0px;
+      margin-right: 6px;
       display: none;
       float: right;
       text-decoration: none;
@@ -47,11 +60,11 @@
       -webkit-tap-highlight-color: transparent; }
     .menuMobile .margintop2 {
       margin-top: 2rem;
-      margin-right: 2rem; }
+      margin-right: 1rem; }
     .menuMobile .menuzord .showhide em {
       width: 34px;
-      height: 7px;
-      margin: 6.5px 18px 0px;
+      height: 4px;
+      margin: 6px 0 0;
       float: right;
       background: #777; }
     .menuMobile .topnav {
@@ -86,17 +99,36 @@
       display: block;
       text-align: left;
       margin-left: 15px;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+      border-bottom: 2px solid rgba(0, 0, 0, 0.03);
       padding: 1rem 3rem !important;
       line-height: 5rem;
       text-decoration: none;
-      font-size: 2em;
-      font-weight: normal;
+      font-size: 2rem;
+      font-weight: 400;
       outline: 0;
       -webkit-tap-highlight-color: transparent;
-      font-family: 'Raleway', sans-serif !important; }
+      font-family: Raleway, sans-serif !important; }
     .menuMobile .topnav.responsive .active a {
-      border-bottom: 3px solid #8FD049; } }
+      border-bottom: 3px solid #ff5722; }
+
+  #preloader .preloader-position {
+    left: 40%;
+    top: 40%; }
+  #preloader img {
+    width: 200px; }
+  #preloader .progress {
+    height: 3px;
+    margin: 18px 0; }
+
+  .menuMobile.tt-nav {
+    position: fixed !important; } }
+@media screen and (max-device-width: 768px) {
+  .menuMobile .whyDependOnUs__icons p {
+    line-height: 1.5em;
+    font-size: 1.8rem;
+    font-family: "Circular","Helvetica",sans-serif; }
+  .menuMobile .whyDependOnUs .textdiv {
+    margin-top: 1em; } }
 /*
 .reviewcarausel{
     height: 60rem;
@@ -264,6 +296,10 @@ h1 {
 .main-text .section-title {
   font-size: 16px;
   margin-bottom: 10px !important; }
+  @media screen and (max-device-width: 768px) {
+    .main-text .section-title {
+      font-size: 15px !important;
+      margin-bottom: 2px !important; } }
 .main-text .intro-title {
   font-family: "Circular","Helvetica",sans-serif !important; }
 
@@ -421,7 +457,7 @@ md-progress-linear .md-container {
     width: 18rem; }
     @media screen and (max-device-width: 767px) {
       .whyDependOnUs .whyDependOnUs__icons img {
-        width: 17rem !important; } }
+        width: 14rem !important; } }
   .whyDependOnUs .textdiv {
     margin-top: 2em; }
   .whyDependOnUs .whyDependOnUs__icons span {
@@ -466,6 +502,11 @@ md-progress-linear .md-container {
   line-height: 1.71em;
   border-radius: 4px;
   text-transform: capitalize; }
+  @media screen and (max-device-width: 768px) {
+    .titlecell .big-button {
+      max-width: 12.5em;
+      line-height: 2.3em;
+      margin-bottom: 1em; } }
 .titlecell .btn-alternate {
   background-color: #fff;
   color: black;
