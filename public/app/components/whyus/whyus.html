@@ -1,5 +1,5 @@
 
-  <section id="whyus" class="whyussection whyus menuDesctop">
+  <section id="whyus" class="whyussection whyus menuDesctop" ng-if="!ismobileview">
       <div class="text-center">
           <h2 class="sectionwhyus text-capitalize service-padding">Why us?</h2>
          
@@ -45,7 +45,9 @@
     
   </section>
 
-  <section id="whyus" class="whyussection whyus menuMobile">
+
+  <!-- ------------------------------mobile view start---------------------------------------- -->
+  <section id="whyus" class="whyussection whyus menuMobile" ng-if="ismobileview">
     <div class="text-center">
       <h2 class="sectionwhyus text-capitalize service-padding">Why us?</h2>
     </div>
@@ -56,7 +58,7 @@
               <div class="">
                 <img src="assets/img/whyus/trained_professionals.png" class="image" alt="Why depend on Novo Was?">
               </div>
-              <div class="col s8 offset-s2 textdiv">
+              <div class="col s10 offset-s1 textdiv">
                 <p>Trained and dedicated service professionals at your service</p>
               </div>
         </div>
@@ -67,7 +69,7 @@
             <div class=" col-sm-12 col-xs-12 ">
               <img src="assets/img/whyus/steam_based_technologies.png" class="image" style="width: 12rem !important;" alt="Why depend on Novo Was?">
             </div>
-            <div class="col-sm-8 col-xs-8 col-xs-offset-2 textdiv">
+            <div class="col s10 offset-s1 textdiv">
               <p>Deploying advanced steam technologies and organic chemicals</p>
             </div>
       </div>
@@ -79,7 +81,7 @@
           <div class=" col-sm-12 col-xs-12 ">
             <img src="assets/img/whyus/premium_quality.png" class="image" alt="Why depend on Novo Was?">
           </div>
-          <div class="col-sm-8 col-xs-8 col-xs-offset-2 textdiv">
+          <div class="col s10 offset-s1 textdiv">
             <p>Premium service quality with on-time, hassle free service experience</p>
           </div>
     </div>

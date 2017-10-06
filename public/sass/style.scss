@@ -67,6 +67,14 @@ $break-small: 768px;
       width: 75vw !important;
       max-width: 250px !important;
     }
+
+    @media screen and (max-device-width: 768px)
+    {
+      margin-top: 6rem;
+      min-width: 26em !important;
+      width: 75vw !important;
+      max-width: 26em !important;
+    }
   }
 
   .md-sidenav-left{
@@ -463,6 +471,12 @@ p{
   margin: 0 7rem 30px !important;
   text-align: justify;
   line-height: 30px;
+  @media screen and (max-device-width: 768px)
+  {
+    margin: 0 2rem 20px!important;
+    text-align: justify;
+    line-height: 24px;
+  }
 }
 }
 

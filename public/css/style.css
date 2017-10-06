@@ -12,6 +12,9 @@
   md-dialog {
     padding-top: 8rem !important; }
 
+  .servicesection {
+    background-color: #fff; }
+
   .md-inline-form {
     height: 100% !important; }
 
@@ -58,6 +61,8 @@
       text-decoration: none;
       outline: 0;
       -webkit-tap-highlight-color: transparent; }
+      .menuMobile .menuzord .showhide img {
+        width: 100% !important; }
     .menuMobile .margintop2 {
       margin-top: 2rem;
       margin-right: 1rem; }
@@ -123,12 +128,100 @@
   .menuMobile.tt-nav {
     position: fixed !important; } }
 @media screen and (max-device-width: 768px) {
+  .menuMobile .slideable {
+    display: none; }
   .menuMobile .whyDependOnUs__icons p {
     line-height: 1.5em;
     font-size: 1.8rem;
     font-family: "Circular","Helvetica",sans-serif; }
   .menuMobile .whyDependOnUs .textdiv {
-    margin-top: 1em; } }
+    margin-top: 1em; }
+  .menuMobile md-toolbar:not(.md-menu-toolbar) {
+    background-color: #8fd049 !important; }
+  .menuMobile md-toolbar:focus {
+    outline-color: #8fd049 !important; }
+  .menuMobile .md-toggle-icon {
+    display: block;
+    margin-left: auto;
+    speak: none;
+    vertical-align: middle;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out; }
+    .menuMobile .md-toggle-icon .toggled {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg); }
+    .menuMobile .md-toggle-icon .material-icons {
+      line-height: 2 !important;
+      font-size: 31px; }
+  .menuMobile .md-toolbar-tools {
+    font-weight: 700 !important; } }
+/* -------------------------Partners Page------------------------------------*/
+@media screen and (max-device-width: 768px) {
+  .partnerSlide {
+    background-color: #fff;
+    margin-top: 1em; }
+    .partnerSlide .section-ourpartner {
+      line-height: 2em !important; }
+    .partnerSlide .owl-item img {
+      width: 80% !important; }
+
+  .infographMobile .infogrText {
+    display: inline-block; }
+    .infographMobile .infogrText .spanclass {
+      font-size: 12px;
+      display: inline-block;
+      display: block; }
+    .infographMobile .infogrText .undertext {
+      font-size: 10px;
+      display: block; }
+
+  .abountusMobile .aboutuspage {
+    background-color: white; }
+  .abountusMobile .OurFounder {
+    background-color: #fafafa; }
+
+  .borderUpdown {
+    border-bottom: 1px solid #fafafa;
+    border-top: 1px solid #fafafa; }
+
+  .hiddenComponents {
+    display: none; }
+
+  .hidefocus:focus {
+    outline: transparent !important; }
+  .hidefocus .offset-s4 {
+    margin-left: 30% !important; }
+
+  /* ---------------------faq page css----------------------- */
+  .background {
+    height: 30px !important; }
+
+  .partials h1 {
+    margin-bottom: 3rem; }
+  .partials h4 {
+    font-size: 15px !important; }
+  .partials .section-whyus {
+    font-size: 30px; }
+
+  .infograph .material-icons {
+    font-size: 5.3rem; }
+  .infograph .spanCount {
+    font-size: 2.4rem; }
+
+  /* --------------------footer css */
+  .footerMobile .footerText {
+    padding-top: 0.5rem; }
+  .footerMobile .mt-10 {
+    margin-top: 0px !important; }
+  .footerMobile h3 {
+    margin: 0 0 6px !important; }
+
+  .service_mobile form h2 {
+    padding-bottom: 1em !important; } }
 /*
 .reviewcarausel{
     height: 60rem;
@@ -342,6 +435,12 @@ md-sidenav {
     min-width: 250px !important;
     width: 75vw !important;
     max-width: 250px !important; }
+  @media screen and (max-device-width: 768px) {
+    md-sidenav {
+      margin-top: 6rem;
+      min-width: 26em !important;
+      width: 75vw !important;
+      max-width: 26em !important; } }
 
 .md-sidenav-left .collection {
   border: none !important; }
@@ -628,6 +727,11 @@ md-progress-linear .md-container {
   margin: 0 7rem 30px !important;
   text-align: justify;
   line-height: 30px; }
+  @media screen and (max-device-width: 768px) {
+    .partials p {
+      margin: 0 2rem 20px !important;
+      text-align: justify;
+      line-height: 24px; } }
 
 ul.faq li span.number {
   display: block;

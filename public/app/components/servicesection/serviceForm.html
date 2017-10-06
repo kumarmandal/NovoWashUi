@@ -1,5 +1,5 @@
-<md-dialog layout="column"  layout-xs="column" flex="{{isdesktop ? 50 : 100}}" ng-class="{{isdesktop ? 'menuDesctop' : 'menuMobile md-inline-form'}}" ng-controller="serviceForm">
-  <div >
+<md-dialog layout="column"  layout-xs="column" flex="{{isdesktop ? 50 : 100}}" ng-controller="serviceForm">
+  <div ng-class="isdesktop ? 'menuDesctop' : 'menuMobile service_mobile md-inline-form'" >
   <div class="md-toolbar-tools" layout="row">
     <strong class="centerHeader" flex="grow">{{categoryServiceData.serviceName}}</strong>
     <span flex></span>
@@ -15,13 +15,13 @@
   <div>
     <span class="col-sm-12 text-capitalize center"   style="{{!isdesktop ? 'margin-left: 25%;' : ''}}"  >&#40; {{progressbar| number : 0}}&#37; complete &#41;<span>
   </div>
-</div>
+
 
 
 
   <md-divider ng-if="!$last" style="{{!isdesktop ? 'padding: 0px !important;' : ''}}"></md-divider>
 
-  <md-dialog-content class="fixedHeightDialog" layout-padding >
+  <md-dialog-content class="fixedHeightDialog serviceFormMobile" layout-padding >
     <md-content class="mddialog">
 
       <form name="projectForm" class="projectForm" novalidate ng-cloak >
@@ -306,4 +306,5 @@
       </form>
     </md-content>
   </md-dialog-content>
+</div>
 </md-dialog>
